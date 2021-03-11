@@ -12,8 +12,7 @@ src/calculator_pin.c\
 src/calculator_AreaPerimeter.c\
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-src/calculator_AreaPerimeter.c\
+TEST_SRC = src/calculator_AreaPerimeter.c\
 src/calculator_conversions.c\
 src/calculator_operations.c\
 src/calculator_pin.c\
