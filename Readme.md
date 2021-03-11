@@ -4,9 +4,7 @@ Visit [Pages for Report -optional](using github.io option)
 
 Build | Cppcheck | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
-![C/C++ CI](Badgelink) | ![Cppcheck](Badgelink) | ![Unity - Unit Testing](Badgelink) | ![Git Inspector](Badgelink)
-
-
+[![C/C++ CI](https://github.com/99003729/sdlc_new/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/99003729/sdlc_new/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/99003729/sdlc_new/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/99003729/sdlc_new/actions/workflows/cppcheck.yml) [![Dynamic Valgrind](https://github.com/99003729/sdlc_new/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/99003729/sdlc_new/actions/workflows/CodeQuality_Dynamic.yml)| [![Unity - Unit Testing](https://github.com/99003729/sdlc_new/actions/workflows/unity.yml/badge.svg)](https://github.com/99003729/sdlc_new/actions/workflows/unity.yml)| [![Git Inspector](https://github.com/99003729/sdlc_new/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/99003729/sdlc_new/actions/workflows/gitinspector.yml)
 ## Folder Structure
 Folder             | Description
 -------------------| -----------------------------------------
