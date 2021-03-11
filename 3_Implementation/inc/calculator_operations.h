@@ -43,11 +43,4 @@ int multiply(int operand1, int operand2);
 * @note returns 0 for divide by 0 error
 */
 int divide(int operand1, int operand2);
-int check_pin(int pin);
-
-double Area_Circle(double radius);
-double Area_Square(double side);
-double Perimeter_Square(double side);
-double Perimeter_Rectangle(double l,double w);
-
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */

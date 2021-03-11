@@ -4,17 +4,17 @@
 /* Modify these two lines according to the project */
 #include <calculator_conversions.h>
 #include <calculator_AreaPerimeter.h>
-#include<calculator_pin.h>
-#define PROJECT_NAME    "Calculator"
+#include <calculator_pin.h>
+#define PROJECT_NAME    "TEAM2"
 
 /* Prototypes for all the test functions */
 void test_add(void);
 void test_add_testcase2(void);
 void test_subtract(void);
-void test_multiply(void);
+void test_multiply(void); 
 void test_divide(void);
 void test_correct_pin(void);
-void test_conversions(void);
+void test_convertions(void);
 void test_AreaPerimeter(void);
 /* Required by the unity test framework */
 void setUp(){}
@@ -34,7 +34,7 @@ int main()
   RUN_TEST(test_multiply);
   RUN_TEST(test_divide);
   RUN_TEST(test_correct_pin);
-  RUN_TEST(test_convert);
+  RUN_TEST(test_convertions);
   RUN_TEST(test_AreaPerimeter);
 
   /* Close the Unity Test Framework */
@@ -76,62 +76,43 @@ void test_divide(void) {
   /* Dummy fail*/
   TEST_ASSERT_EQUAL(3, divide(2, 2));
 }
-void test_get_pin(void) {
+void test_correct_pin(void) {
   TEST_ASSERT_EQUAL(0, correct_pin(1234));
   
   /* Dummy fail*/
   TEST_ASSERT_EQUAL(1234, correct_pin(7878));
   /* Dummy fail*/
-   TEST_ASSERT_EQUAL(1, correct_pin(798678));
+  TEST_ASSERT_EQUAL(1, correct_pin(798678));
 }
-void test_convert(void) {
-  TEST_ASSERT_EQUAL(472.441, convert(1,12));
+void test_convertions(void) 
+{
+  TEST_ASSERT_EQUAL(472.441, conversion(1,12));
   
   /* Dummy fail*/
-  TEST_ASSERT_EQUAL(111, convert(1,!@));
+  TEST_ASSERT_EQUAL(111, conversion(1,2222));
   /* Dummy fail*/
-  TEST_ASSERT_EQUAL(aa, convert(2,aaa));
+  TEST_ASSERT_EQUAL(4568, conversion(2,33144));
 }
+
 void test_AreaPerimeter(void)
 {
    //for choose operation
-  TEST_ASSERT_EQUAL(1, Area(1)) ;
-  TEST_ASSERT_EQUAL(2, Perimeter(2));
+  TEST_ASSERT_EQUAL(1, Area_Circle(1)) ;
+  TEST_ASSERT_EQUAL(2, Perimeter_Square(2));
     /*Dummy Test fail*/
-  TEST_ASSERT_EQUAL(r, Area(1));
-  TEST_ASSERT_EQUAL(u, Perimeter(2));
+  TEST_ASSERT_EQUAL("r", Area_Circle(1));
+  TEST_ASSERT_EQUAL("u", Perimeter_Rectangle(2,468));
     
    //for choose shape under area function
-  TEST_ASSERT_EQUAL(1, Circle(1));
-  TSET_ASSERT_EQUAL(2, Square(2));
+  TEST_ASSERT_EQUAL(1, Area_Circle(1));
+  TEST_ASSERT_EQUAL(2, Perimeter_Square(2));
    
      /*Dummy Test fail*/
-  TEST_ASSERT_EQUAL(r, Circle(1));
-  TSET_ASSERT_EQUAL(u, Square(2));
+  TEST_ASSERT_EQUAL("r", Area_Circle(1));
+  TEST_ASSERT_EQUAL("u", Perimeter_Square(2));
     
    //for choose shape under perimeter function
-  TEST_ASSERT_EQUAL(1, square(1));
-  TSET_ASSERT_EQUAL(2, rectangle(2));
-    
-    /*Dummy Test fail*/
-  TEST_ASSERT_EQUAL(r, square(1));
-  TSET_ASSERT_EQUAL(o, rectangle(2));
-    
-   //for Area of circle and Square
-   TEST_ASSERT_EQUAL(3.142, AreaCircle(1));
-   TEST_ASSERT_EQUAL(1, AreaSquare(1));
-    
-    /*Dummy Test fail*/
-  TEST_ASSERT_EQUAL(0, AreaCircle(0));
-  TSET_ASSERT_EQUAL(0, AreaSquare(0));
-  
-   //for Perimeter of Square and Rectangle
-   TEST_ASSERT_EQUAL(0, PSquare(0));
-   TEST_ASSERT_EQUAL(0, PRectangle(0));
-    
-    /*Dummy test fail*/
-    TEST_ASSERT_EQUAL(0, PSquare(0));
-    TEST_ASSERT_EQUAL(0, PRectangle(0));
-}
-    
+  TEST_ASSERT_EQUAL(1, Area_Square(1));
+  TEST_ASSERT_EQUAL(2, Perimeter_Rectangle(2,879));
 
+}
