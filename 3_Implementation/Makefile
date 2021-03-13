@@ -58,8 +58,8 @@ test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
-memcheck: $(PROJECT_NAME).exe
-	valgrind ./$(PROJECT_NAME).exe
+memcheck: $(PROJECT_NAME).out
+	valgrind ./$(PROJECT_NAME).out
 # Remove all the built files, invoke by `make clean`
 clean:
 	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
