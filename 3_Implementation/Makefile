@@ -57,10 +57,6 @@ run:$(PROJECT_NAME)
 test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
-analysis:    
-    cppcheck $(SRC)    
     
 memcheck: $(PROJECT_NAME).exe
     valgrind ./$(PROJECT_NAME).exe
